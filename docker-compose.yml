@@ -13,4 +13,5 @@ services:
       - gotify_data:/app/data
 
 volumes:
-  gotify_data
+  gotify_data:
+  
