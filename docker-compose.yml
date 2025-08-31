@@ -1,0 +1,16 @@
+#http
+version: '3'
+
+services:
+  gotify:
+    image: gotify/server
+    ports:
+      - 4684:80
+    environment:
+      - GOTIFY_DEFAULTUSER_NAME=${GOTIFY_DEFAULTUSER_NAME}
+      - GOTIFY_DEFAULTUSER_PASS=${GOTIFY_DEFAULTUSER_PASS}
+    volumes:
+      - gotify_data:/app/data
+
+volumes:
+  gotify_data
